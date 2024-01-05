@@ -1,0 +1,258 @@
+.header {
+  display: flex;
+  height: 54px;
+  width: 100%;
+  background: linear-gradient(180deg, #101010 0%, #0B0B0B 100%);
+  align-items: center;
+  justify-content: space-between;
+}
+.boldWhiteText{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.048px;
+  color: #fff;
+}
+.whiteText{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.048px;
+  color: #fff;
+}
+.boldYellowText{
+  color: #D7A830;
+  
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  letter-spacing: -0.64px;
+}
+.leftZone {
+  height: 100%;
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+.middleZone{
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.rightZone{
+  display: flex;
+  align-items: center;
+  width: 220px;
+  justify-content: flex-end;
+}
+.pointer{
+  margin: 0 12px;
+}
+.buyButton{
+  display: flex;
+width: 115px;
+height: 38px;
+padding: 10px 14px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 100px;
+background: var(--Text-Night-Primary-1, #FFF);
+backdrop-filter: blur(15px);
+border: none;
+cursor: pointer;
+margin-right: 14px;
+}
+.buyButtonText{
+  color: transparent;
+  text-shadow: 0px 0px 30px rgba(102, 204, 255, 0.20);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  background: linear-gradient(to right, #8e8e8e 5%, #6e6d6d 10%, black 90%, white 90%);
+  background-size: 200%;
+    -webkit-background-clip: text;
+}
+.closeButton{
+  margin-right: 20px;
+  cursor: pointer;
+}
+.comma{
+  display: none;
+}
+.arrow{
+  display: none;
+}
+
+.card{
+  width: 600px;
+  height: 349px;
+  display: flex;
+  border-radius: 16px;
+  background-image: url(/src/assets/bannerPict.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+  justify-content: flex-end;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.textBlock{
+  margin-right: 15px;
+}
+.cardClose{
+  display: flex;
+  justify-content: flex-end;
+}
+.cardClose .closeButton{
+  margin: 0 0 36px 0;
+}
+.cardTitle{
+  color: #FFF;
+text-align: center;
+font-size: 46px;
+font-style: normal;
+font-weight: 500;
+line-height: 110%; /* 50.6px */
+letter-spacing: -1.84px;
+margin-bottom: 25px;
+}
+.cardDiscount{
+  color: transparent;
+    background: linear-gradient(to right, #7D5317, #EDDF95);
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -1.6px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.cardCode{
+  color: #6C6C70;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: 0.08px;
+  margin-bottom: 40px;
+  margin-top: 14px;
+}
+.cardButton{
+  display: inline-flex;
+  padding: 12px 24px;
+  align-items: flex-start;
+  gap: 5px;
+  border-radius: 14px;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.10);
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: 0.08px;
+  cursor: pointer;
+}
+.bannerBlock{
+  position: absolute;
+  right: 20px;
+  top: 115vh;
+}
+
+/* адаптив */
+@media screen and (min-width: 1025px) {
+  .closeButton:hover path{
+    fill-opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .closeButton, .desktopText{
+    display: none;
+  }
+  .cardClose .closeButton{
+    display: block;
+  }
+  .leftZone, .rightZone{
+    width: 185px;
+  }
+  
+}
+@media screen and (max-width: 767px){
+  .rightZone, .pointer, .desktopText{
+    display: none;
+  }
+  .leftZone{
+    position: relative;
+    left: -36px;
+    flex-shrink: 1;
+    justify-content: left;
+  }
+  .header{
+    justify-content: flex-start;
+  }
+  .comma{
+    display: block;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.048px;
+    margin-right: 4px;
+  }
+  .whiteText2{
+    display: none;
+  }
+  .arrow{
+    display: block;
+  }
+  .boldYellowText{
+    margin-right: 18px;
+  }
+  .cardCode .boldYellowText{
+    margin: unset;
+  }
+  .card{
+    width: 100vw;
+    background-size: cover;
+    border-radius: 0;
+    background-position: -140px;
+    background-color: #0d0d0d;
+  }
+  .textBlock{
+    margin: unset;
+    width: 100%;
+  }
+  .bannerBlock{
+    right: 0;
+    left: 0;
+    width: 100vw;
+  }
+  .cardRightZone{
+    width: 100%;
+  }
+  .cardButtonDesktop{
+    display: none;
+  }
+}
+
+
+/* .gradient{
+  width: 1408px;
+height: 1408px;
+border-radius: 1408px;
+background: radial-gradient(50% 50% at 50% 50%, #FAE571 0%, rgba(11, 14, 23, 0.00) 100%);
+filter: blur(92px);
+position: absolute;
+    left: 500px;
+    top: -1140px;
+} */
